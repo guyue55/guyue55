@@ -2,9 +2,8 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
     - cron: '0 0 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   generate:
@@ -19,13 +18,13 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Generate Snake Animation
+      - name: Generate Snake Animation (github-dark palette)
         uses: Platane/snk@v3
         with:
           github_user_name: guyue55
           outputs: |
-            dist/github-contribution-grid-snake.svg?palette=github-dark&color_snake=#00ff00
-            dist/github-contribution-grid-snake.gif?palette=github-dark&color_snake=#00ff00
+            dist/github-contribution-grid-snake.svg?palette=github-dark
+            dist/github-contribution-grid-snake.gif?palette=github-dark
           
       - name: Commit and Push
         run: |
