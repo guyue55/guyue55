@@ -18,13 +18,8 @@ The snake eats my contribution graph daily! 🟩🍎
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=guyue55&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=guyue55&layout=compact&theme=tokyonight&hide_border=true" />
+  <img height="180" src="https://streak-stats.demolab.com/?user=guyue55&theme=tokyonight&hide_border=true" />
 </div>
-
-## 🔥 Streak Stats
-
-![streak](https://github-readme-streak-stats.herokuapp.com/?user=guyue55&theme=tokyonight&hide_border=true)
 
 ## 🔧 Tech Stack
 
