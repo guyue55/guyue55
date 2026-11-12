@@ -14,6 +14,11 @@ jobs:
       contents: write
     
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Generate Snake Animation
         uses: Platane/snk@v3
         with:
@@ -21,11 +26,6 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg?palette=github-dark&color_snake=#00ff00
             dist/github-contribution-grid-snake.gif?palette=github-dark&color_snake=#00ff00
-          
-      - name: Push Changes
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Commit and Push
         run: |
