@@ -1,0 +1,45 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: guyue55
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake.gif
+          # Control snake behavior
+          snake_color: "#00ff00"        # Snake body color
+          head_color: "#ff0000"         # Snake head color  
+          food_color: "#ffff00"         # Food color
+          background_color: "#0d1117"   # Dark background
+          number_of_threads: 4          # Performance
+          # Control direction and boundaries
+          tail_path: "contributions"    # Follow contribution path
+          max_length: 100               # Maximum snake length
+          
+      - name: Push Changes
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git diff --cached --quiet || git commit -m "Update snake animation $(date +'%Y-%m-%d')"
+          git push
