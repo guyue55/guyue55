@@ -18,13 +18,13 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Generate Snake Animation (github-dark palette)
+      - name: Generate Snake Animation (default github palette like Ebony-Vinyl)
         uses: Platane/snk@v3
         with:
           github_user_name: guyue55
           outputs: |
-            dist/github-contribution-grid-snake.svg?palette=github-dark
-            dist/github-contribution-grid-snake.gif?palette=github-dark
+            dist/github-contribution-grid-snake.svg?palette=github
+            dist/github-contribution-grid-snake.gif?palette=github
           
       - name: Commit and Push
         run: |
