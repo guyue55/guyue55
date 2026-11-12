@@ -22,10 +22,6 @@ The snake eats my contribution graph daily! 🟩🍎
   <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=guyue55&layout=compact&theme=tokyonight&hide_border=true" />
 </div>
 
-## 🏆 GitHub Trophies
-
-![trophies](https://github-profile-trophy.vercel.app/?username=guyue55&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4)
-
 ## 🔥 Streak Stats
 
 ![streak](https://github-readme-streak-stats.herokuapp.com/?user=guyue55&theme=tokyonight&hide_border=true)
@@ -41,10 +37,6 @@ The snake eats my contribution graph daily! 🟩🍎
 | **Cloud** | AWS, GCP, Cloudflare, Vercel |
 | **Databases** | PostgreSQL, Redis, MongoDB, ClickHouse |
 | **Tools** | Git, VS Code, vim, tmux, zsh |
-
-## 📈 Activity Graph
-
-![activity](https://github-readme-activity-graph.vercel.app/graph?username=guyue55&theme=tokyonight&hide_border=true&area=true)
 
 ## 📫 Contact
 
